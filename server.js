@@ -10,6 +10,10 @@ app.use(morgan('combined'));
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/article-one.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -20,9 +24,7 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/tharun1.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'tharun1.html'));
 });
-app.get('/article-one.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-});
+
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
